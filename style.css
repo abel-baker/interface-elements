@@ -1,0 +1,94 @@
+:root {
+  --dark: #C91F37; 
+  --med: #D24D57; 
+  --down: #9D2933; 
+  --disabled: #F47983;
+  --focus: #F22613;
+  /* peach-colored #F47983 */
+  /* chestnut rose #D24D57 */
+  /* foreign crimson #C91F37 */
+  /* cochineal #9D2933 */
+  /* true red #8F1D21 */
+  /* pomegranate #F22613 */
+
+  --med-yellow: #FFB61E; /* gamboge */
+  --dark-yellow: #FAA945; /* corn-colored */ 
+  --down-yellow: #E08A1E; /* sumac-dyed */
+  --disabled-yellow: #FFB94E; /* floral leaf-colored */
+  --focus-yellow: #F5AB35; /* lightning yellow */
+
+}
+
+body {
+  font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif !important;  
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+section.checkboxes {
+  text-align: center;
+  width: 350px;
+  margin: 20px auto;
+}
+
+label {
+  background-color: var(--dark);
+  border-color: var(--dark);
+  border-width: 3px;
+  border-radius: 8px;
+  padding: 3px 7px;
+  font-weight: 700;
+  color: #fff;
+  font-size: 12px;
+  vertical-align: baseline;
+  line-height: 1;
+  display: inline-block;
+  user-select: none;
+}
+
+input:not(:disabled):active ~ label,
+input:checked ~ label {
+  box-shadow: inset 0 1px 8px rgb(0 0 0 / 40%);
+}
+
+/* RED */
+span.red input ~ label {
+  background-color: var(--dark);
+  border-color: var(--dark);
+}
+span.red input:not(:disabled):hover ~ label {
+  background-color: var(--med);
+}
+span.red input:not(:disabled):active ~ label {
+  background-color: var(--down);
+}
+span.red input:disabled ~ label {
+  background-color: var(--disabled);
+}
+span.red input:focus ~ label {
+  background-color: var(--focus);
+}
+
+/* YELLOW */
+span.yellow input ~ label {
+  background-color: var(--dark-yellow);
+  border-color: var(--dark-yellow);
+}
+span.yellow input:not(:disabled):hover ~ label {
+  background-color: var(--med-yellow);
+}
+span.yellow input:not(:disabled):active ~ label {
+  background-color: var(--down-yellow);
+}
+span.yellow input:disabled ~ label {
+  background-color: var(--disabled-yellow);
+}
+span.yellow input:focus ~ label {
+  background-color: var(--focus-yellow);
+}
