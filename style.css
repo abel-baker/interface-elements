@@ -1,9 +1,9 @@
 :root {
-  --dark: #C91F37; 
-  --med: #D24D57; 
+  --main: #C91F37; 
+  --hover: #D24D57; /* low sat */
   --down: #9D2933; 
-  --disabled: #F47983;
-  --focus: #F22613;
+  --disabled: #F47983; /* ultra low sat */
+  --focus: #F22613; /* high sat / vibrant */
   /* peach-colored #F47983 */
   /* chestnut rose #D24D57 */
   /* foreign crimson #C91F37 */
@@ -11,16 +11,35 @@
   /* true red #8F1D21 */
   /* pomegranate #F22613 */
 
-  --med-yellow: #FFB61E; /* gamboge */
-  --dark-yellow: #FAA945; /* corn-colored */ 
+  --main-yellow: #FAA945; /* corn-colored */ 
+  --hover-yellow: #FFB61E; /* gamboge */
   --down-yellow: #E08A1E; /* sumac-dyed */
-  --disabled-yellow: #FFB94E; /* floral leaf-colored */
+  --disabled-yellow: #FFD390; 
   --focus-yellow: #F5AB35; /* lightning yellow */
 
+  --main-green: #26A65B; /* eucalyptus */ 
+  --hover-green: #407A52; /* patina */
+  --down-green: #006442; /* green bamboo */
+  --disabled-green: #87D37C; /* gossip */
+  --focus-green: #2ABB9B; /* free speech aquamarine */
+
+  --main-blue: #19B5FE; /* dodger blue */ 
+  --hover-blue: #59ABE3; /* picton blue 2 */
+  --down-blue: #4B77BE; /* steel blue */
+  --disabled-blue: #89C4F4; /* jordy blue */
+  --focus-blue: #22A7F0; /* picton blue 1 */
+
+  --main-purple: #8E44AD; /* studio */ 
+  --hover-purple: #9B59B6; /* wisteria */
+  --down-purple: #875F9A; /* wisteria purple */
+  --disabled-purple: #BE90D4; /* light wisteria */
+  --focus-purple: #BF55EC; /* medium purple */
 }
 
 body {
   font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif !important;  
+  user-select: none;
+  line-height: 1.4;
 }
 
 input[type="checkbox"] {
@@ -33,23 +52,22 @@ input[type="checkbox"] {
 
 section.checkboxes {
   text-align: center;
-  width: 350px;
+  width: 280px;
   margin: 20px auto;
 }
 
 label {
-  background-color: var(--dark);
-  border-color: var(--dark);
+  background-color: var(--main);
+  border-color: var(--main);
   border-width: 3px;
   border-radius: 8px;
-  padding: 3px 7px;
+  padding: 3px 11px;
   font-weight: 700;
   color: #fff;
   font-size: 12px;
   vertical-align: baseline;
   line-height: 1;
   display: inline-block;
-  user-select: none;
 }
 
 input:not(:disabled):active ~ label,
@@ -59,11 +77,11 @@ input:checked ~ label {
 
 /* RED */
 span.red input ~ label {
-  background-color: var(--dark);
-  border-color: var(--dark);
+  background-color: var(--main);
+  border-color: var(--main);
 }
 span.red input:not(:disabled):hover ~ label {
-  background-color: var(--med);
+  background-color: var(--hover);
 }
 span.red input:not(:disabled):active ~ label {
   background-color: var(--down);
@@ -71,17 +89,17 @@ span.red input:not(:disabled):active ~ label {
 span.red input:disabled ~ label {
   background-color: var(--disabled);
 }
-span.red input:focus ~ label {
+span.red input:focus-visible  ~ label {
   background-color: var(--focus);
 }
 
 /* YELLOW */
 span.yellow input ~ label {
-  background-color: var(--dark-yellow);
-  border-color: var(--dark-yellow);
+  background-color: var(--main-yellow);
+  border-color: var(--main-yellow);
 }
 span.yellow input:not(:disabled):hover ~ label {
-  background-color: var(--med-yellow);
+  background-color: var(--hover-yellow);
 }
 span.yellow input:not(:disabled):active ~ label {
   background-color: var(--down-yellow);
@@ -89,6 +107,60 @@ span.yellow input:not(:disabled):active ~ label {
 span.yellow input:disabled ~ label {
   background-color: var(--disabled-yellow);
 }
-span.yellow input:focus ~ label {
+span.yellow input:focus-visible ~ label {
   background-color: var(--focus-yellow);
+}
+
+/* GREEN */
+span.green input ~ label {
+  background-color: var(--main-green);
+  border-color: var(--main-green);
+}
+span.green input:not(:disabled):hover ~ label {
+  background-color: var(--hover-green);
+}
+span.green input:not(:disabled):active ~ label {
+  background-color: var(--down-green);
+}
+span.green input:disabled ~ label {
+  background-color: var(--disabled-green);
+}
+span.green input:focus-visible ~ label {
+  background-color: var(--focus-green);
+}
+
+/* BLUE */
+span.blue input ~ label {
+  background-color: var(--main-blue);
+  border-color: var(--main-blue);
+}
+span.blue input:not(:disabled):hover ~ label {
+  background-color: var(--hover-blue);
+}
+span.blue input:not(:disabled):active ~ label {
+  background-color: var(--down-blue);
+}
+span.blue input:disabled ~ label {
+  background-color: var(--disabled-blue);
+}
+span.blue input:focus-visible ~ label {
+  background-color: var(--focus-blue);
+}
+
+/* PURPLE */
+span.purple input ~ label {
+  background-color: var(--main-purple);
+  border-color: var(--main-purple);
+}
+span.purple input:not(:disabled):hover ~ label {
+  background-color: var(--hover-purple);
+}
+span.purple input:not(:disabled):active ~ label {
+  background-color: var(--down-purple);
+}
+span.purple input:disabled ~ label {
+  background-color: var(--disabled-purple);
+}
+span.purple input:focus-visible ~ label {
+  background-color: var(--focus-purple);
 }
