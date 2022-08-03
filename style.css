@@ -34,6 +34,12 @@
   --down-purple: #875F9A; /* wisteria purple */
   --disabled-purple: #BE90D4; /* light wisteria */
   --focus-purple: #BF55EC; /* medium purple */
+
+  --main-pink: #C93756; /* medium crimson */ 
+  --hover-pink: #D24D57; /* chestnut rose */
+  --down-pink: #C3272B; /* pure crimson */
+  --disabled-pink: #F47983; /* peach-colored */
+  --focus-pink: #F62459; /* radical red */
 }
 
 body {
@@ -163,4 +169,22 @@ span.purple input:disabled ~ label {
 }
 span.purple input:focus-visible ~ label {
   background-color: var(--focus-purple);
+}
+
+/* PINK */
+span.pink input ~ label {
+  background-color: var(--main-pink);
+  border-color: var(--main-pink);
+}
+span.pink input:not(:disabled):hover ~ label {
+  background-color: var(--hover-pink);
+}
+span.pink input:not(:disabled):active ~ label {
+  background-color: var(--down-pink);
+}
+span.pink input:disabled ~ label {
+  background-color: var(--disabled-pink);
+}
+span.pink input:focus-visible ~ label {
+  background-color: var(--focus-pink);
 }
