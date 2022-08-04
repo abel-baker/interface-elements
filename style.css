@@ -1,9 +1,9 @@
 :root {
-  --main: #C91F37; 
-  --hover: #D24D57; /* low sat */
-  --down: #9D2933; 
-  --disabled: #F47983; /* ultra low sat */
-  --focus: #F22613; /* high sat / vibrant */
+  --main-red: #C91F37; 
+  --hover-red: #D24D57; /* low sat */
+  --down-red: #9D2933; 
+  --disabled-red: #F47983; /* ultra low sat */
+  --focus-red: #F22613; /* high sat / vibrant */
   /* peach-colored #F47983 */
   /* chestnut rose #D24D57 */
   /* foreign crimson #C91F37 */
@@ -40,6 +40,12 @@
   --down-pink: #C3272B; /* pure crimson */
   --disabled-pink: #F47983; /* peach-colored */
   --focus-pink: #F62459; /* radical red */
+
+  /* --main: #;
+  --hover: ;
+  --down: ;
+  --disabled: ;
+  --focus: ; */
 }
 
 body {
@@ -63,8 +69,8 @@ section.checkboxes {
 }
 
 label {
-  background-color: var(--main);
-  border-color: var(--main);
+  background-color: var(--main-red);
+  border-color: var(--main-red);
   border-width: 3px;
   border-radius: 8px;
   padding: 3px 11px;
@@ -83,20 +89,20 @@ input:checked ~ label {
 
 /* RED */
 span.red input ~ label {
-  background-color: var(--main);
-  border-color: var(--main);
+  background-color: var(--main-red);
+  border-color: var(--main-red);
 }
 span.red input:not(:disabled):hover ~ label {
-  background-color: var(--hover);
+  background-color: var(--hover-red);
 }
 span.red input:not(:disabled):active ~ label {
-  background-color: var(--down);
+  background-color: var(--down-red);
 }
 span.red input:disabled ~ label {
-  background-color: var(--disabled);
+  background-color: var(--disabled-red);
 }
 span.red input:focus-visible  ~ label {
-  background-color: var(--focus);
+  background-color: var(--focus-red);
 }
 
 /* YELLOW */
